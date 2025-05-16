@@ -16,7 +16,9 @@ class MetaPanel(Static):
     """Display for current cursor position and time."""
     def update_meta(self, line, col):
         self.update(f"\U0001F4CD Cursor: ({line+1}, {col+1}) | \u23F0 {datetime.now().strftime('%H:%M:%S')}")
-
+        def __init__(self, id: str | None = None) -> None:
+            super().__init__(id=id)
+            
 class WSYSEditor(App):
 
     CSS = """
